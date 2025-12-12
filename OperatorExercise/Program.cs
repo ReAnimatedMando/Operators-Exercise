@@ -2,6 +2,11 @@
 {
     public class Program
     {
+        public static double AreaOfCircle(double radius) // Create a public methd, that takes a return type of double, and returns the area of a circle taking user input
+        {
+            return Math.PI * Math.Pow(radius, 2);
+        }
+        
         static void Main(string[] args)
         {
             // arithmetic operations
@@ -26,7 +31,11 @@
             Console.WriteLine($"{c} / {d} equals {quotient}"); // write quotient to console
             Console.WriteLine($"{c} % {d} is {quotient} remainder  {remainder}"); // write remainder to console
             
-            
+            Console.WriteLine("Please enter the circles radius:"); // write a message to the user, requesting they enter the radius of a circle
+            double radius = double.Parse(Console.ReadLine()); // create prompt for user input
+
+            //Console.WriteLine($"The area of a circle with a radius of {radius} = {AreaOfCircle()}");
+
         }
     }
 }
